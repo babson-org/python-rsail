@@ -31,7 +31,7 @@
     "**/.vscode": true,
     "**/.git": true,
     "**/misc": true,
-    "**/default_code": false
+    "**/default_code": true
   },
 
   // ??? Editor UI preferences

@@ -1,5 +1,5 @@
 {
-  // 🔒 Disable GitHub Copilot completely
+  // ?? Disable GitHub Copilot completely
   "github.copilot.enable": {"*":false},
   "github.copilot.inlineSuggest.enable": false,
   "github.copilot.editor.enableAutoCompletions": false,
@@ -8,11 +8,11 @@
   "inlineChat.accessibleDiffView": "off",
   "terminal.integrated.initialHint": false,
 
-  // 🧾 Git display and behavior
+  // ?? Git display and behavior
   "git.showUntrackedFiles": true,
   "git.untrackedChanges": "mixed",
 
-  // 🐍 Python interpreter and terminal activation
+  // ?? Python interpreter and terminal activation
   "python.defaultInterpreterPath": "${workspaceFolder}/venv/bin/python",
   "python.terminal.activateEnvironment": true,
   "python.analysis.extraPaths": [
@@ -20,7 +20,7 @@
     "/workspaces/python_class/labs/lab2/default_code"
   ],
 
-  // 📁 Explorer sorting and file exclusions
+  // ?? Explorer sorting and file exclusions
   "explorer.sortOrder": "filesFirst",
   "files.exclude": {
    // "**/__pycache__": true,
@@ -31,13 +31,13 @@
     "**/.vscode": true,
     "**/.git": true,
     "**/misc": true,
-    "**/default_code": true
+    "**/default_code": false
   },
 
-  // 🗺️ Editor UI preferences
+  // ??? Editor UI preferences
   "editor.minimap.showSlider": "mouseover",
 
-  // ▶️ Code Runner execution settings
+  // ?? Code Runner execution settings
   "code-runner.runInTerminal": true
 }
 

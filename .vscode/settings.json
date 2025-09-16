@@ -57,7 +57,8 @@
   "code-runner.ignoreSelection": true,
   "code-runner.executorMap": {
      "python": "python -u"
-  }
+  },
+  "workbench.editor.tabActionLocation": "right"
 }
 
 

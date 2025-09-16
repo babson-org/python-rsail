@@ -60,6 +60,7 @@ clear_screen = import_module("utils").clear_screen
 
 from utils import clear_screen
 import time
+import sys
 
 def play_game():
     """
@@ -89,6 +90,8 @@ def play_game():
     # Get player name and assign AI name.
     ai_name = 'Big Mean Machine'
     player_name = input('Please enter your name: ')
+    
+    sys.stdout.flush()
 
     # Ask who plays first: 1 = player, 2 = computer.
     txt = 'Who plays first (1/you, 2/computer)? '

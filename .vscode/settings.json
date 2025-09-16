@@ -51,6 +51,8 @@
     "workbench.editor.enablePreview": false,
     "workbench.editor.enablePreviewFromQuickOpen": false,
     "workbench.editor.tabCloseButton": "right",
+    "workbench.editor.showTabs": true,
+
 
   // ?? Code Runner execution settings
   "code-runner.runInTerminal": true,

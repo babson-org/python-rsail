@@ -23,8 +23,8 @@
   // ?? Explorer sorting and file exclusions
   "explorer.sortOrder": "filesFirst",
   "files.exclude": {
-   // "**/__pycache__": true,
-   //S "**/*.pyc": true,
+    "**/__pycache__": true,
+    "**/*.pyc": true,
     "**/venv": true,
     "**/.devcontainer": true,
     "**/.history": true,

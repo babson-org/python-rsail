@@ -124,12 +124,12 @@ def input_client(clients):
         'transactions': [create_transaction(next_id, 'CONTRIBUTION', cash, '$$$$', 'Cash', 1.00)]
     }
 
-    price = 1.0
+    
     position = {'id': next_id,             
                 'shares': cash,
                 'symbol': '$$$$',
                 'name': 'Cash',
-                'avg_cost': cash}
+                'avg_cost': 1.00}
     
     client['positions'].append(position)
 

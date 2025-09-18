@@ -43,6 +43,15 @@
   "search.exclude": {
     "**/tempCodeRunnerFile.py": true
   },
+  
+  
+   
+    // ?? Notebook settings
+    "notebook.globalToolbar": false,
+    "jupyter.globalToolbar": false,    
+    "notebook.cellToolbarVisibility": "hidden",   // hides the little run/+ buttons on each cell
+
+  
 
   // ??? Editor UI preferences
   "editor.minimap.showSlider": "mouseover",
@@ -51,7 +60,7 @@
     "workbench.editor.enablePreview": false,
     "workbench.editor.enablePreviewFromQuickOpen": false,
     "workbench.editor.tabCloseButton": "right",
-    "workbench.editor.showTabs": true,
+    "workbench.editor.showTabs": "multiple",
 
 
   // ?? Code Runner execution settings

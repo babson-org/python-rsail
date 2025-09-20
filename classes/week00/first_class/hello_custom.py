@@ -1,9 +1,5 @@
 # %%
-<<<<<<< HEAD:classes/week00/first_class/hello_custom_mycopy.py
-print('Hello, World! ')
-=======
-print('Hello, World!   ')
->>>>>>> a537e5e5981ef7245431babedebbdc7168691628:classes/week00/first_class/hello_custom.py
+print('Hello, World! xx  ')
 
 # %%
 name = input('Please enter your name: ')

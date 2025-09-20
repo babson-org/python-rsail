@@ -111,9 +111,8 @@ def input_client(clients):
         else:
             if cash > 0:
                 break
-            txt = 'Please enter a positive number for cash: '    
-
-    #cash = Decimal(cash).quantize(Decimal("0.01"), rounding=ROUND_HALF_UP)
+            txt = 'Please enter a positive number for cash: ' 
+    
     next_id = get_next_id(clients)
 
     client = {
@@ -121,10 +120,13 @@ def input_client(clients):
         'fname': fname,
         'lname': lname,
         'positions': [],
-        'transactions': [create_transaction(next_id, 'CONTRIBUTION', cash, '$$$$', 'Cash', 1.00)]
+        'transactions': []
     }
 
-    
+    transaction = create_transaction(next_id, 'CONTRIBUTION', cash, '$$$$', 'Cash', 1.00)
+    client['transactions'].append(transaction)
+
+    # create client = _update_position(client, transaction )
     position = {'id': next_id,             
                 'shares': cash,
                 'symbol': '$$$$',

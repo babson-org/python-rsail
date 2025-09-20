@@ -1,9 +1,5 @@
 # %%
-<<<<<<< HEAD
-print('Hello, World! xx  ')
-=======
-print('Hello, World! yy  ')
->>>>>>> c1ecd41af99397bc001e143dc1e4bf9588ee72a7
+print('Hello, World! aa  ')
 
 # %%
 name = input('Please enter your name: ')

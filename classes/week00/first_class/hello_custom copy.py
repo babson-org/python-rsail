@@ -1,5 +1,9 @@
 # %%
+<<<<<<< HEAD
+print('Hello, World! aa  ')
+=======
 print('Hello, World! bb  ')
+>>>>>>> 44cf2a90280cc7f5da271f0073eab1983db08016
 
 # %%
 name = input('Please enter your name: ')

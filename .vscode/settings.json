@@ -22,7 +22,7 @@
 
   // ?? Explorer sorting and file exclusions
   "explorer.sortOrder": "filesFirst",
-  "explorer.excludeGitIgnore": true,
+  "explorer.excludeGitIgnore": false,  
   "files.exclude": {
     "**/__pycache__": true,
     "**/*.pyc": true,
@@ -31,17 +31,21 @@
     "**/.history": true,
     "**/.vscode": true,
     "**/.git": true,
+    "**/.gitignore": true,
+    "**/.gitattributes": true,
+    "**/.nbstripout.json": true,
     "**/misc": true, 
-    "**/tempCodeRunnerFile.py": true,
+    "**/tempCodeRunnerFile.*": true,
     "**/default_code": true
   },
   
   "files.watcherExclude": {
-      "**/tempCodeRunnerFile.py": true
+      "**/.gitignore": true,
+      "**/tempCodeRunnerFile.*": true
   },
   
   "search.exclude": {
-    "**/tempCodeRunnerFile.py": true
+    "**/tempCodeRunnerFile.*": true
   },
   
   

@@ -1,7 +1,7 @@
 '''
 ## Rethinking input_client() and Position Updates
 
-Take a look at input_client() in the portfolio folder.  
+Take a look at input_client() in client.py in the portfolio folder.  
 Right now, this is the function that creates a new client.  
 
 ### Current Behavior
@@ -13,7 +13,7 @@ Right now, this is the function that creates a new client.
   2. Updating the cash position inside input_client().
 
 This works, but it's not a great design. The logic for updating positions is **scattered**, 
-and `input_client()` is doing too much.
+and input_client() is doing too much.
 
 ---
 
@@ -65,6 +65,9 @@ Refactor:
 - Move position-update logic out of input_client().
 - Implement _update_position(client, transaction).
 - Call it automatically inside create_transaction() for every transaction type.
+
+For Wednesday, write the function so it handles CONTRIBUTIONS and
+WITHDRAWALS.  For now, return None for transaction types BUY or SELL
 
 This way:
 - transactions become the **source of truth**.

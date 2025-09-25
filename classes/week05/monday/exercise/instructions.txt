@@ -1,0 +1,14 @@
+For Monday complete _update_postion.py and buy_input.py.
+
+When a purchase is made our cash position will need to be adjusted 
+this should happen in the _update_postions() function
+Is the cash adjustment a transaction? Does it need to be added to 
+the transactions list?
+
+Place all error checking logic for a BUY transaction inside of buy_input.py
+valid tickers for purchase are in the file ticker.data
+For now, ask user for ticker, shares and transaction price
+make sure the portfolio has enough cash on hand for the purchase
+
+Do not try to run your code!  Make a good faith effort, you may work in groups
+of 3 or less. Spend 1 1/2 to 3 hours on this.

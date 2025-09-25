@@ -22,7 +22,7 @@
 
   // ?? Explorer sorting and file exclusions
   "explorer.sortOrder": "filesFirst",
-  "explorer.excludeGitIgnore": true,
+  "explorer.excludeGitIgnore": false,  
   "files.exclude": {
     "**/__pycache__": true,
     "**/*.pyc": true,
@@ -31,24 +31,37 @@
     "**/.history": true,
     "**/.vscode": true,
     "**/.git": true,
+    "**/.gitignore": true,
+    "**/.gitattributes": true,
+    "**/.nbstripout.json": true,
     "**/misc": true, 
-    "**/tempCodeRunnerFile.py": true,
+    "**/tempCodeRunnerFile.*": true,
     "**/default_code": true
   },
   
   "files.watcherExclude": {
-      "**/tempCodeRunnerFile.py": true
+      "**/.gitignore": true,
+      "**/tempCodeRunnerFile.*": true
   },
   
   "search.exclude": {
-    "**/tempCodeRunnerFile.py": true
+    "**/tempCodeRunnerFile.*": true
   },
+  
+  
+   
+    // ?? Notebook settings
+    "notebook.globalToolbar": false,
+    "jupyter.globalToolbar": false,    
+    "notebook.cellToolbarVisibility": "hidden",   // hides the little run/+ buttons on each cell
+
+  
 
   // ??? Editor UI preferences
   "editor.minimap.showSlider": "mouseover",
   
   // ?? Tab / Editor behavior
-    "workbench.editor.enablePreview": false,
+    "workbench.editor.enablePreview": true,
     "workbench.editor.enablePreviewFromQuickOpen": false,
     "workbench.editor.tabCloseButton": "right",
     "workbench.editor.showTabs": "multiple",

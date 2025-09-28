@@ -8,7 +8,7 @@ gpa = 3.7
 email = 'spinkerton@babson.edu'
 international = False
 
-'''
+
 
 student = []
 
@@ -68,7 +68,7 @@ for idx in range(3):
 
 #print(students)
 
-
+import pprint
 
 clients = []
 client = {'fname': None, 'lname': None, 'transactions' : []}
@@ -84,11 +84,4 @@ clients[0]['transactions'].append(transaction)
 
 
 for client in clients:
-    print(client)
-'''
-def rev(s):
-    for c in s:
-        print(c)
-        return str(c) + rev(s[1:])
-    
-print(rev("abc"))
+    pprint.pprint(client)

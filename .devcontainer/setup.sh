@@ -38,7 +38,7 @@ git config --global alias.upstream-save '!f() { \
   done; \
   if [ -n "$(git diff --cached --name-only)" ]; then \
     git commit -m "Merge upstream/main, preserving student copies"; \
-    echo "If you still see merge conflicts, rerun: git upstream-save until you see 'Already up to date.'"; \
+    echo "If you still see merge conflicts, rerun: git upstream-save until you see \"Already up to date.\""; \
   fi; \
 }; f'
 

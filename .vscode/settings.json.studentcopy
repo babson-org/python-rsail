@@ -1,6 +1,6 @@
 {
   // ?? Disable GitHub Copilot completely
-  "github.copilot.enable": {"*": false},
+  "github.copilot.enable": {"*":false},
   "github.copilot.inlineSuggest.enable": false,
   "github.copilot.editor.enableAutoCompletions": false,
   "chat.commandCenter.enabled": false, // Hide Copilot Chat UI (top bar + status bar)
@@ -22,7 +22,7 @@
 
   // ?? Explorer sorting and file exclusions
   "explorer.sortOrder": "filesFirst",
-  "explorer.excludeGitIgnore": false,
+  "explorer.excludeGitIgnore": false,  
   "files.exclude": {
     "**/__pycache__": true,
     "**/*.pyc": true,
@@ -34,47 +34,47 @@
     "**/.gitignore": true,
     "**/.gitattributes": true,
     "**/.nbstripout.json": true,
-    "**/misc": true,
+    "**/misc": true, 
     "**/tempCodeRunnerFile.*": true,
     "**/default_code": true
   },
   
   "files.watcherExclude": {
-    "**/.gitignore": true,
-    "**/tempCodeRunnerFile.*": true
+      "**/.gitignore": true,
+      "**/tempCodeRunnerFile.*": true
   },
   
   "search.exclude": {
     "**/tempCodeRunnerFile.*": true
   },
+  
+  
+   
+    // ?? Notebook settings
+    "notebook.globalToolbar": false,
+    "jupyter.globalToolbar": false,    
+    "notebook.cellToolbarVisibility": "hidden",   // hides the little run/+ buttons on each cell
 
-  // ?? Notebook settings
-  "notebook.globalToolbar": false,
-  "jupyter.globalToolbar": false,
-  "notebook.cellToolbarVisibility": "hidden",   // hides the little run/+ buttons on each cell
+  
 
   // ??? Editor UI preferences
   "editor.minimap.showSlider": "mouseover",
-
+  
   // ?? Tab / Editor behavior
-  "workbench.editor.enablePreview": false,
-  "workbench.editor.enablePreviewFromQuickOpen": false,
-  "workbench.editor.tabCloseButton": "right",
-  "workbench.editor.showTabs": "multiple",
+    "workbench.editor.enablePreview": true,
+    "workbench.editor.enablePreviewFromQuickOpen": false,
+    "workbench.editor.tabCloseButton": "right",
+    "workbench.editor.showTabs": "multiple",
+
 
   // ?? Code Runner execution settings
   "code-runner.runInTerminal": true,
   "code-runner.ignoreSelection": true,
   "code-runner.executorMap": {
-    "python": "python -u"
+     "python": "python -u"
   },
-  "workbench.editor.tabActionLocation": "right",
-
-  // ?? Live Share defaults for classroom use
-  "liveshare.guestReadOnly": true,            // guests join read-only by default
-  "liveshare.guestApprovalRequired": true     // you approve each student before they join
+  "workbench.editor.tabActionLocation": "right"
 }
-
 
 
 

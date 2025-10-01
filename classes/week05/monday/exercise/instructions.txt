@@ -1,14 +1,10 @@
-For Monday complete _update_postion.py and buy_input.py.
+Prepare with your solutions for ai_move.py and calc_score.py from Lab 2 (Tic-Tac-Toe).
 
-When a purchase is made our cash position will need to be adjusted 
-this should happen in the _update_postions() function
-Is the cash adjustment a transaction? Does it need to be added to 
-the transactions list?
+Both functions are pretty straightforward. You may use the starter code in calc_score.py, but it’s not required. 
+Implement calc_score so it checks the 8 winning lines (3 rows, 3 columns, 2 diagonals) and:
 
-Place all error checking logic for a BUY transaction inside of buy_input.py
-valid tickers for purchase are in the file ticker.data
-For now, ask user for ticker, shares and transaction price
-make sure the portfolio has enough cash on hand for the purchase
+returns 30 if the cells in a line sum to 30,
+returns -30 if they sum to -30,
+otherwise returns 0.
 
-Do not try to run your code!  Make a good faith effort, you may work in groups
-of 3 or less. Spend 1 1/2 to 3 hours on this.
+See you Monday — thanks!

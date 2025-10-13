@@ -32,6 +32,11 @@ if git rev-parse --is-inside-work-tree >/dev/null 2>&1; then
   git config --global --add safe.directory /workspaces/*
 fi
 
+# Ensure nbstripout filter is set in local repo config
+git config --local filter.nbstripout.clean "$(pwd)/venv/bin/python -m nbstripout"
+git config --local filter.nbstripout.smudge "$(pwd)/venv/bin/python -m nbstripout"
+
+
 # Optional custom setup
 if [ -f .devcontainer/setup.sh ]; then
   bash .devcontainer/setup.sh

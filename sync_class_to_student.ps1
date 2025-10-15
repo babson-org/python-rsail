@@ -27,7 +27,8 @@ Write-Host "==========================================`n"
 if (-not (Test-Path $ConfigFile)) {
     $GitStudentURL = Read-Host "Enter your GitHub student repo URL (example: https://github.com/babson-org/python-yourname.git)"
     Set-Content -Path $ConfigFile -Value $GitStudentURL
-} else {
+}
+else {
     $GitStudentURL = Get-Content -Path $ConfigFile -Raw
 }
 
@@ -40,7 +41,7 @@ if (-not (Test-Path (Join-Path $Dest ".git"))) {
     Set-Location $Root
     Remove-Item -Recurse -Force $Dest -ErrorAction SilentlyContinue | Out-Null
     git clone $GitStudentURL "student_repo"
-    Write-Host "✅ Student repo cloned successfully.`n"
+    Write-Host "Student repo cloned successfully.`n"
 }
 
 # Clone class repo if missing
@@ -49,7 +50,7 @@ if (-not (Test-Path (Join-Path $Source ".git"))) {
     Set-Location $Root
     Remove-Item -Recurse -Force $Source -ErrorAction SilentlyContinue | Out-Null
     git clone $GitClassURL "class_repo"
-    Write-Host "✅ Class repo cloned successfully.`n"
+    Write-Host "Class repo cloned successfully.`n"
 }
 
 # --- STEP 1: Commit & push student repo ---
@@ -60,8 +61,9 @@ $pending = git status --porcelain
 if ($pending) {
     git commit -m "Auto-sync commit from PowerShell script"
     git push origin main
-    Write-Host "✅ Student repo committed and pushed to GitHub.`n"
-} else {
+    Write-Host "Student repo committed and pushed to GitHub.`n"
+}
+else {
     Write-Host "No local changes to commit.`n"
 }
 
@@ -70,9 +72,10 @@ Set-Location (Join-Path $Root "class_repo")
 Write-Host "[2/3] Pulling latest updates from class repo..."
 git pull
 if ($LASTEXITCODE -eq 0) {
-    Write-Host "✅ Class repo updated successfully.`n"
-} else {
-    Write-Host "⚠️  Warning: Could not update class repo.`n"
+    Write-Host "Class repo updated successfully.`n"
+}
+else {
+    Write-Host "Warning: Could not update class repo.`n"
 }
 
 # --- STEP 3: Compare & Copy ---
@@ -128,7 +131,8 @@ foreach ($srcFile in $sourceFiles) {
             Copy-Item $srcFile.FullName $destFile -Force
             Write-Host "Overwrote $relativePath"
             $ModifiedOverwritten++
-        } else {
+        }
+        else {
             $SkippedFiles++
         }
     }
@@ -141,9 +145,9 @@ Write-Host "New files copied:      $NewFilesCopied"
 Write-Host "Files overwritten:     $ModifiedOverwritten"
 Write-Host "Files skipped:         $SkippedFiles"
 Write-Host "----------------------------------"
-Write-Host "✅ Student repo committed & pushed. (Step 1)"
-Write-Host "✅ Class repo updated.             (Step 2)"
-Write-Host "✅ Files synced.                   (Step 3)"
+Write-Host "Student repo committed & pushed. (Step 1)"
+Write-Host "Class repo updated.             (Step 2)"
+Write-Host "Files synced.                   (Step 3)"
 Write-Host "=========================================="
 
 # Return to student repo

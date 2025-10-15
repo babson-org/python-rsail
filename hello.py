@@ -1,1 +1,1 @@
-print('student')
+print('teacher!')

@@ -1,6 +1,11 @@
 #!/usr/bin/env bash
 set -eux
 
+# Mark workspace as safe
+git config --global --add safe.directory /workspaces/python_class || true
+
+
+
 # Create venv if missing
 if [ ! -d venv ]; then
   python3 -m venv --without-pip venv
@@ -25,11 +30,6 @@ if git rev-parse --is-inside-work-tree >/dev/null 2>&1; then
   # Explicitly configure Git to use venv's Python for nbstripout
   git config filter.nbstripout.clean "venv/bin/python -m nbstripout"
   git config filter.nbstripout.smudge "venv/bin/python -m nbstripout"
-fi
-
-# Mark workspace as safe
-if git rev-parse --is-inside-work-tree >/dev/null 2>&1; then
-  git config --global --add safe.directory /workspaces/*
 fi
 
 # Ensure nbstripout filter is set in local repo config

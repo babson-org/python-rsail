@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/bashn
 set -e
 
 # Create virtual environment if it doesn't exist

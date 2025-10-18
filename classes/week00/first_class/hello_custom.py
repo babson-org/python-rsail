@@ -1,5 +1,5 @@
 # %%
-print("Hello, World! dd    ")
+print("Hello, World!     ")
 
 # %%
 name = input("Please enter your name: ")

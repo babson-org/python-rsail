@@ -1,13 +1,15 @@
-# 1. Reset any ongoing merge
-git merge --abort || true
+# 1️⃣ Cancel any half-finished merge
+git merge --abort 2>/dev/null || true
 
-# 2. Throw away the student's copy of the bad notebook
+# 2️⃣ Fetch the latest instructor updates
 git fetch upstream
-git checkout upstream/main -- classes/week02/monday/exercise/s1-12.ipynb
 
-# 3. Stage and commit the teacher's version
+# 3️⃣ Checkout your own (student’s) version of the file — discard the upstream one
+git checkout --ours classes/week02/monday/exercise/s1-12.ipynb
+
+# 4️⃣ Mark the conflict resolved and commit
 git add classes/week02/monday/exercise/s1-12.ipynb
-git commit -m "Reset s1-12.ipynb to teacher's version"
+git commit -m "Keep student version of s1-12.ipynb (ignore upstream changes)"
 
-# 4. Try the sync again
+# 5️⃣ Re-run your sync command
 git upstream-save

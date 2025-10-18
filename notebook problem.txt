@@ -4,7 +4,7 @@ git merge --abort 2>/dev/null || true
 # 2️⃣ Fetch the latest instructor updates
 git fetch upstream
 
-#do a status to find file
+# do a git status to find file
 git status
 
 # 3️⃣ Checkout your own (student’s) version of the file — discard the upstream one

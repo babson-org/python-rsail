@@ -9,7 +9,7 @@
 Write-Host "`n=== Permanent Fix for 'Not Digitally Signed' Error ===`n" -ForegroundColor Cyan
 
 # Ensure running from correct folder
-cd C:\PythonClass
+cd D:\PythonClass
 
 # Detect PowerShell version
 $ver = $PSVersionTable.PSVersion.Major

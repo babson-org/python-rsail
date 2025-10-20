@@ -1,0 +1,4 @@
+Unblock-File C:\PythonClass\fix_execution_policy.ps1
+Unblock-File C:\PythonClass\setup_envirionment.ps1
+Unblock-File C:\PythonClass\sync_class_to_student.ps1
+pwsh -ExecutionPolicy Bypass -File "C:\PythonClass\fix_execution_policy.ps1"

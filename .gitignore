@@ -43,3 +43,11 @@ tempCodeRunnerFile.*
 
 *.vsix
 
+# -------------------------
+# Devcontainer and VS Code setup
+# -------------------------
+!.devcontainer/
+!.devcontainer/**
+!.vscode/
+!.vscode/**
+

@@ -46,8 +46,8 @@ tempCodeRunnerFile.*
 # -------------------------
 # Devcontainer and VS Code setup
 # -------------------------
-!.devcontainer/
-!.devcontainer/**
-!.vscode/
-!.vscode/**
+.devcontainer/
+.devcontainer/**
+.vscode/
+.vscode/**
 

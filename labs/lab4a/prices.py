@@ -1,7 +1,3 @@
-
-
-
-
 '''
 prices.py provides price lookup utilities for the portfolio system.
 
@@ -109,7 +105,9 @@ def get_last_close_map(symbols): #note: sybols is a list
 
     # Try multi-symbol download
     try:
-        data = yf.download(symbols, period="1d", threads=False)
+        #data = yf.download(symbols, period="1d", threads=False)
+        data = yf.download(symbols, period="1d", threads=False, auto_adjust=False, progress = False)
+
         if data is None or "Close" not in data:
             raise RuntimeError("No 'Close' data returned")
 

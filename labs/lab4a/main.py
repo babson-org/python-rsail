@@ -7,7 +7,7 @@ def clear_screen():
     os.system("cls" if os.name == "nt" else "clear")
 clear_screen()
 
-def print_portfolio_table_from_map(portfolio, px_map):
+def print_portfolio_table_from_map(portfolio, px_map):    
     # Header
     print(f"{'Shares':<12}{'Symbol':<12}{'CPS':<12}{'Price':<12}{'MKT':<12}")
     print("-" * 60)

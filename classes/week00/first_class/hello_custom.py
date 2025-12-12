@@ -7,7 +7,6 @@ print("Hello, " + name + "!")
 
 # new comment
 
-
 # another comment
 """
 The print() function will print out strings and numbers.  However you can't 

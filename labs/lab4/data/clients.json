@@ -11,13 +11,19 @@
     ]
   },
   "Bob": {
-    "cash": 500.0,
+    "cash": 9244.989997558594,
     "positions": [
       {
         "sym": "MSFT",
         "name": "MSFT",
-        "shares": 3,
-        "cost": 900.0
+        "shares": 3.0,
+        "cost": 1128.0
+      },
+      {
+        "sym": "AAPL",
+        "name": "AAPL",
+        "shares": 3.0,
+        "cost": 858.57
       }
     ]
   },

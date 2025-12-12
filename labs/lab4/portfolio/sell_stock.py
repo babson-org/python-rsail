@@ -18,8 +18,22 @@ def portfolio_sell_stock(self, sym: str, shares: float, price: float):
     - Increase self.cash by proceeds
     - Hint: the amount you reduce cost is NOT the same as the amount you increase cash
     """
-    
-    
+    while True:
+        sym = sym.upper()
+        pos = _find_position(self, sym)
+        if pos: break
+        else: sym = input("ticker not found in portfolio, enter ticker: ")
 
+    while True:
+        if pos['shares'] < shares:
+            print(f"You only have {pos['shares']} to sell")
+            shares = int(input('Enter shares to sell: '))
+        else: break
+        
+    
+    cost_per_share = pos['cost'] / pos['shares']
+    pos['cost'] -= cost_per_share * shares
+    pos['shares'] -= shares
+    self.cash += round(shares * price, 2)
     return
        

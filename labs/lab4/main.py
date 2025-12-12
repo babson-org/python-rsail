@@ -106,8 +106,8 @@ def manage_portfolio(portfolio):
                 continue
             try:
                 shares = float(s)
-                portfolio.buy_stock(sym, shares, px)
-                print("Your purchase is confirmed.")
+                portfolio.buy_stock(sym, shares, px)                
+                print("Your purchase is confirmed.")                
             except Exception as e:
                 print(e)
             input("\n(Press Enter to return)")
@@ -166,6 +166,7 @@ def main():
             try:
                 ps.save()
                 print("Saved.")
+                time.sleep(2)
             except Exception:
                 pass
             print("Goodbye!")
